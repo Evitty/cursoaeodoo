@@ -9,4 +9,8 @@
     'depends': [
         'base'
     ],
+    'data': [
+        'views/music_school_student_views.xml',
+        'views/music_school_menuitems.xml'
+    ]
 }
