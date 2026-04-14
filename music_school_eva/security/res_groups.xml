@@ -21,7 +21,7 @@
     <record id="music_school_student_personal_rule" model="ir.rule">
         <field name="name">Personal students</field>
         <field name="model_id" ref="model_music_school_student" />
-        <field name="domain_force">['|',('user_id', '=','user.id'), ('user_id', '=', False)]</field>
+        <field name="domain_force">['|',('user_id', '=', user.id), ('user_id', '=', False)]</field>
         <field name="groups" eval="[(4, ref('group_music_school_user'))]" />
     </record>
 
