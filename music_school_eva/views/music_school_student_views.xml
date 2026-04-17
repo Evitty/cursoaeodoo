@@ -13,4 +13,19 @@
         </field>
     </record>
 
+    <record id="music_school_student_view_list" model="ir.ui.view">
+        <field name="name">music.school.student.view.list</field>
+        <field name="model">music.school.student</field>
+        <field name="arch" type="xml">
+            <list string="Students">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="user_id"/>
+                <field name="birthdate"/>
+                <field name="age"/>
+            </list>
+        </field>
+    </record>
+
 </odoo>
