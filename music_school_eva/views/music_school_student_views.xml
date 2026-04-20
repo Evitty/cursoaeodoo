@@ -42,7 +42,6 @@
                     </div>
                     <group>
                         <group>
-                            <field name="partner_id"/>
                            <field name="email"/>
                             <field name="phone"/>
                         </group>
