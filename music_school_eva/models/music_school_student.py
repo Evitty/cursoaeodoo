@@ -9,10 +9,10 @@ class MusicSchoolStudent(models.Model):
     email = fields.Char(string="Email")
     phone = fields.Char(string="Phone")
     birthdate = fields.Date(string="Birthdate")
-    age = fields.Integer(string='Age')
+    age = fields.Integer(string="Age")
     user_id = fields.Many2one(
         comodel_name = 'res.users', 
-        string='Responsible',
+        string = "Responsible",
         help = "Responsible user for this student"
     )
     notes = fields.Html(
