@@ -36,23 +36,24 @@
                 <sheet>
                     <div class="oe_title">
                         <h1>
-                            <field name="name"/>
+                            <field name="name" placeholder="Student Name"/>
                         </h1>
 
                     </div>
                     <group>
-                        <field name="email"/>
-                        <field name="phone"/>
-                    </group>
-                    <group>
-                        <field name="user_id"/>
-                        <field name="birthdate"/>
-                        <field name="age"/>
+                        <group>
+                           <field name="email"/>
+                            <field name="phone"/> 
+                        </group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="birthdate"/>
+                            <field name="age"/>
+                        </group>
                     </group>
                 </sheet>
             </form>
         </field>
-
     </record>
 
 </odoo>

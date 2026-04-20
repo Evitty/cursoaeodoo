@@ -14,4 +14,8 @@ class MusicSchoolStudent(models.Model):
         comodel_name = 'res.users', 
         string='Responsible',
         help = "Responsible user for this student"
-    ) 
+    )
+    notes = fields.Html(
+        string="Notes",
+        help="Additional notes about the student"
+    )
