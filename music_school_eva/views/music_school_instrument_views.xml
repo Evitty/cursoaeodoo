@@ -19,7 +19,7 @@
         <field name="arch" type="xml">
             <list string="Instruments">
                 <field name="name"/>
-                <field name="family_id" optional="show"/>
+                <field name="family" optional="show"/>
                 <field name="description" optional="hide"/>
             </list>
         </field>
@@ -37,7 +37,7 @@
                         </h1>
                     </div>
                     <group>
-                        <field name="family_id"/>
+                        <field name="family" widget="radio"/>
                     </group>
                     <notebook>
                         <page string="Description">

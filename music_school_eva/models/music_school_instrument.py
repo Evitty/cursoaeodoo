@@ -1,27 +1,20 @@
 from odoo import models, fields
 
-
 class MusicSchoolInstrument(models.Model):
     _name = 'music.school.instrument'
     _description = 'Instruments'
-    _order = 'name desc'
-
-    active = fields.Boolean(string="Active", default=True)
-    name = fields.Char(string="Name", required=True, translate=True)
-    family_id = fields.Many2one(
-        comodel_name='music.school.instrument.family',
+    
+    name = fields.Char(string="Name", required=True)
+    family = fields.Selection(
+        selection=[
+            ('string', 'String'),
+            ('wind', 'Wind'),
+            ('percussion', 'Percussion'),
+            ('keyboard', 'Keyboard'),
+            ('electronic', 'Electronic'),
+        ],
         string="Family",
-        help="Family of the instrument"
+        required=True
     )
+
     description = fields.Text(string="Description")
-    last_maintenance_date = fields.Date(
-        string="Last Maintenance Date",
-        help="Date of the last maintenance performed on the instrument"
-    )
-
-    is_repaired = fields.Boolean(
-        string="Is Repaired",
-        compute='_compute_is_repaired',
-        inverse='_set_is_repaired',
-
-    )
